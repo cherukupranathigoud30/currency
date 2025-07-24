@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Restaurant Name</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Your Restaurant Name</h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#reservations">Reservations</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Experience the best culinary delights</h2>
+            <p>Fresh ingredients, authentic flavors, unforgettable dining.</p>
+            <a href="#menu" class="button">View Our Menu</a>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>Our Delicious Menu</h2>
+            <div class="menu-categories">
+                <!--  Menu categories (e.g., Appetizers, Main Courses, Desserts) go here  -->
+            </div>
+            <div class="menu-items">
+                <!--  Menu items with name, description, and price go here  -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Our Restaurant</h2>
+            <p>
+                <!--  Restaurant history and philosophy go here  -->
+            </p>
+        </div>
+    </section>
+
+    <section id="reservations" class="reservation-section">
+        <div class="container">
+            <h2>Make a Reservation</h2>
+            <!--  Reservation form goes here  -->
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>
+                <!--  Contact information, address, and map go here  -->
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Your Restaurant Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+Use code with caution.
+
+3. CSS styling (style.css)
+This styles the HTML to create a visually appealing website. 
+css
+/*  General styles  */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/*  Header and Navigation  */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*  Hero section  */
+.hero {
+    min-height: 400px;
+    background: #f4f4f4;
+    text-align: center;
+    padding-top: 100px;
+}
+
+/*  Sections  */
+.menu-section, .about-section, .reservation-section, .contact-section {
+    padding: 20px 0;
+}
+
+/*  Footer  */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/*  Responsive Design (adjust as needed)  */
+@media(max-width: 768px) {
+    header h1, header ul {
+        float: none;
+        text-align: center;
+    }
+
+    header li {
+        padding: 10px;
+        display: block;
+    }
+}
+Use code with caution.
+
+4. JavaScript functionality (script.js)
+This adds basic interactivity, like smooth scrolling. 
+js
+// Smooth scrolling for navigation links
+$(document).ready(function () { 
+    $("a").on("click", function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+
+            var hash = this.hash;
+
+            $("html, body").animate({
+                scrollTop: $(hash).offset().top,
+            }, 800, function () {
+                window.location.hash = hash;
+            });
+        }
+    });
+});
